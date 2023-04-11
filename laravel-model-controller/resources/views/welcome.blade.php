@@ -2,8 +2,14 @@
 
 @section('content')
     @foreach ($movies as $movie)
-        <h1>Titolo: {{ $movie['title'] }}</h1>
-        <h2>ID: {{ $movie['original_title']}}</h2>  
-        <p>Vote: {{ $movie['vote'] }}</p>
+        <div class="card">
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Titolo: {{ $movie['title'] }}</li>
+                    <li class="list-group-item">ID: {{ $movie['original_title'] }}</li>
+                    <li class="list-group-item">Vote: {{ $movie['vote'] }}</li>
+                </ul>
+            </div>
+        </div>
     @endforeach
 @endsection
